@@ -26,7 +26,6 @@ python -m pip install flash-attn --no-build-isolation
 
 ## Training
 <!-- PSR, NSR, W-REINFORCE: specify `advantage` in `run_qwen2.5-math-7b_psr_nsr.sh` to train the model with PSR, NSR, or W-REINFORCE. For W-REINFORCE, set `positive_advantage_weight`, which corresponds to the λ in the paper, recommended value is 0.1. -->
-```
 GRPO
 ```
 bash run_qwen2.5-math-7b-grpo.sh
@@ -34,6 +33,7 @@ bash run_qwen2.5-math-7b-grpo.sh
 GRPO + A-GRAE
 ```
 bash run_qwen2.5-math-7b-grpo-agrae.sh
+```
 
 
 
