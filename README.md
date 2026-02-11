@@ -48,16 +48,16 @@ Calculate Pass@k: `python calculate_metrics --file_path <file_to_evaluate>`
 - Out-of-Memory error: Decrease `actor_rollout_ref.actor.ppo_max_token_len_per_gpu`, `actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu`, `actor_rollout_ref.ref.log_prob_max_token_len_per_gpu`
 
 - Frozen after `Started a local Ray instance.`: Add `num_cpus=N` to `ray.init()` in `verl/trainer/main_ppo.py`,  for example, `ray.init(num_cpus=4, runtime_env={'env_vars': {'TOKENIZERS_PARALLELISM': 'true', 'NCCL_DEBUG': 'WARN'}})`
- 
-<!-- ## Citation
+
+## Citation
 
 If you find our paper or code useful, please consider cite our work:
 
 ```bibtex
-@article{zhu2026rlvr-decomposed,
-  title={The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning},
-  author={Zhu, Xinyu and Xia, Mengzhou and Wei, Zhepei and Chen, Wei-Lin and Chen, Danqi and Meng, Yu},
-  journal={arXiv preprint arXiv:2506.01347},
-  year={2025}
-} -->
+@article{yu2026unveiling,
+  title={Unveiling Implicit Advantage Symmetry: Why GRPO Struggles with Exploration and Difficulty Adaptation},
+  author={Yu, Zhiqi and Chen, Zhangquan and Liu, Mengting and Zhang, Heye and Qu, Liangqiong},
+  journal={arXiv preprint arXiv:2602.05548},
+  year={2026}
+}
 
