@@ -7,11 +7,7 @@
 
 </div>
 
-## News
-- **[2026/02/06]** We release our [paper](https://arxiv.org/abs/2602.05548) and code. 🚀
-## Quick Start
-### Installation
-Our code is implemented based on [verl](https://github.com/volcengine/verl) and [W-REINFORCE](https://github.com/TianHongZXY/RLVR-Decomposed). Thanks for their great work! We recommend to use docker image provided by verl, please refer to their [documents](https://verl.readthedocs.io/en/v0.2.x/start/install.html).
+
 
 Start from a custom environment:
 ```
@@ -49,15 +45,5 @@ Calculate Pass@k: `python calculate_metrics --file_path <file_to_evaluate>`
 
 - Frozen after `Started a local Ray instance.`: Add `num_cpus=N` to `ray.init()` in `verl/trainer/main_ppo.py`,  for example, `ray.init(num_cpus=4, runtime_env={'env_vars': {'TOKENIZERS_PARALLELISM': 'true', 'NCCL_DEBUG': 'WARN'}})`
 
-## Citation
 
-If you find our paper or code useful, please consider cite our work:
-
-```bibtex
-@article{yu2026unveiling,
-  title={Unveiling Implicit Advantage Symmetry: Why GRPO Struggles with Exploration and Difficulty Adaptation},
-  author={Yu, Zhiqi and Chen, Zhangquan and Liu, Mengting and Zhang, Heye and Qu, Liangqiong},
-  journal={arXiv preprint arXiv:2602.05548},
-  year={2026}
-}
 
